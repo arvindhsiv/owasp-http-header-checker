@@ -4,7 +4,7 @@ A Flask-based web application that scans any public website to detect the presen
 
 ---
 
-## Our Story: From Mad Libs to Cybersecurity
+## BTS: From Mad Libs to Cybersecurity
 
 This project began as a simple coding exercise while working on a [Mad Libs Flask App](https://github.com/arvindhsiv/madlib-flask-docker). The goal was to build a fun, interactive word game using Flask that takes user input and creates a randomized story — a classic beginner-friendly project to get comfortable with Python, forms, and web templates.
 
