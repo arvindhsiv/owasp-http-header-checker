@@ -12,6 +12,8 @@
 
 from flask import Flask, render_template, request
 import random
+import requests
+# Importing the requests library to make HTTP requests
 
 
 # Instantiates the app
