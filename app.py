@@ -56,7 +56,7 @@ def index():
         except Exception as e:
             error = f"Could not reach {url}: {e}"
 
-    return render_template('index.html', headers=headers_result, known_headers=OWASP_HEADERS, error=error)
+    return render_template('index.html', headers=headers_result, known_headers=OWASP_HEADERS, error=error, scanned_url=url)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
