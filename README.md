@@ -4,12 +4,15 @@ A Flask-based web application that scans any public website to detect the presen
 
 ---
 
-### About the Project
+## Our Story: From Mad Libs to Cybersecurity
 
-This application is designed to make it easy to verify whether a website includes key HTTP response headers that protect against common security threats such as cross-site scripting (XSS), clickjacking, and data leaks.
+This project began as a simple coding exercise while working on a [Mad Libs Flask App](https://github.com/arvindhsiv/madlib-flask-docker). The goal was to build a fun, interactive word game using Flask that takes user input and creates a randomized story — a classic beginner-friendly project to get comfortable with Python, forms, and web templates.
 
-Users can input any URL, and the app will perform a real-time HTTP request to retrieve and analyze response headers. The results are displayed in a simple, readable format showing which headers are present and which are missing.
+As I understood more about Flask’s request handling and rendering, I started asking a different kind of question:
 
+What if I used this same web form logic to inspect something real — like a website’s security posture?
+
+That led to this transformation: the word inputs became URLs, and instead of returning a story, the app now returns a report on HTTP response headers, based on OWASP’s best practices. It evolved from a learning tool to a lightweight but useful cybersecurity utility that helps identify missing or misconfigured headers on public websites.
 ---
 
 ### Features
