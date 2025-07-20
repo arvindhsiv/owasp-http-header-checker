@@ -13,6 +13,7 @@
 from flask import Flask, render_template, request
 import random
 
+
 # Instantiates the app
 app = Flask(__name__)
 
@@ -54,3 +55,6 @@ def index():
             error = f"Could not reach {url}: {e}"
 
     return render_template('index.html', headers=headers_result, known_headers=OWASP_HEADERS, error=error)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
