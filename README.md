@@ -10,9 +10,10 @@ This project began as a simple coding exercise while working on a [Mad Libs Flas
 
 As I understood more about Flask’s request handling and rendering, I started asking a different kind of question:
 
-What if I used this same web form logic to inspect something real — like a website’s security posture?
+What if I used this same web form logic to inspect something real — like a website’s security posture?  
 
 That led to this transformation: the word inputs became URLs, and instead of returning a story, the app now returns a report on HTTP response headers, based on OWASP’s best practices. It evolved from a learning tool to a lightweight but useful cybersecurity utility that helps identify missing or misconfigured headers on public websites.
+
 ---
 
 ### Features
