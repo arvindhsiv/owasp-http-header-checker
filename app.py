@@ -51,8 +51,9 @@ def index():
             response = requests.get(url, timeout=5)
             for header in OWASP_HEADERS:
                 name = header["name"]
-                value = response.headers.get(name, None)
-                headers_result[name] = value if value else  "Missing"
+                value = response.headers.get(name)
+                headers_result[name] = value if value and value.strip() else "❌ Missing"
+
         except Exception as e:
             error = f"Could not reach {url}: {e}"
 

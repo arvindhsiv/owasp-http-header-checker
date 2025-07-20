@@ -34,11 +34,11 @@
             <tr>
                 <td>{{ header.name }}</td>
                 <td>
-                    {% if headers[header.name] == "❌ Missing" %}
-                        <span class="missing">❌ Missing</span>
-                    {% else %}
+                    {% if headers[header.name] != "❌ Missing" %}
                         <span class="present">✅ Present</span>
-                    {% endif %}
+                    {% else %}
+                        <span class="missing">❌ Missing</span>
+                     {% endif %}
                 </td>
                 <td>{{ headers[header.name] }}</td>
             </tr>
