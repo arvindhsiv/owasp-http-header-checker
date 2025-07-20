@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Security Header Scanner</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .missing { color: red; }
+        .present { color: green; }
+        .header-table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        .header-table th, .header-table td { border: 1px solid #ccc; padding: 8px; }
+        .header-table th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>🔍 HTTP Security Header Scanner</h1>
+    <form method="POST">
+        <input type="text" name="url" placeholder="example.com" size="40" required>
+        <button type="submit">Scan</button>
+    </form>
+
+    {% if error %}
+        <p class="missing">{{ error }}</p>
+    {% endif %}
+
+    {% if headers %}
+        <table class="header-table">
+            <tr>
+                <th>Header</th>
+                <th>Status</th>
+                <th>Value</th>
+            </tr>
+            {% for header in known_headers %}
+            <tr>
+                <td>{{ header.name }}</td>
+                <td>
+                    {% if headers[header.name] == "❌ Missing" %}
+                        <span class="missing">❌ Missing</span>
+                    {% else %}
+                        <span class="present">✅ Present</span>
+                    {% endif %}
+                </td>
+                <td>{{ headers[header.name] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>

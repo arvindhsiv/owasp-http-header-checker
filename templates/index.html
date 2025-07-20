@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MadLib - Cybersecurity Heist</title>
+</head>
+<body>
+    <h1>🕵️ MadLib: Cybersecurity Heist</h1>
+    <form method="POST">
+        {% for field in [
+            'adjective1','noun1','noun2','noun3','verb1','adjective2',
+            'noun4','verb2','adjective3','adjective4','noun5','verb3',
+            'noun6','plural_noun1','verb4','adjective5'
+        ] %}
+            <label>{{ field }}:</label>
+            <input type="text" name="{{ field }}" placeholder="Leave blank for random"><br><br>
+        {% endfor %}
+        <input type="submit" value="Generate Story">
+    </form>
+</body>
+</html>
